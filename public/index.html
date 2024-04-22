@@ -19,7 +19,7 @@
 
             <div class="weather-report-input">
                 <p>Location</p>
-                <input type="text" id="input-location" value="Rotterdam"></input><button class="submit-input" type="button" id="submit-location" onclick="set_weather_report()">Set location</button>
+                <input type="text" id="input-location" value="Rotterdam"></input><button class="submit-input" type="button" id="submit-location">Set location</button>
             </div>
             
             <div class="weather-report-output">
@@ -48,19 +48,11 @@
 
     <script>
 
-        let user_location = document.getElementById('input-location').value;
-        console.log(user_location);
-
-        function set_weather_report() {
-            let user_location = document.getElementById('input-location').value;
-            console.log(`Input lacation ${user_location}`);
-        };
-
-        // document.getElementById('submit-location').addEventListener('clink', (e) => {
-        //     // e.preventDefault();
-        //     console.log('luister')
-        //     set_weather_report()
-        // })
+        document.getElementById('submit-location').addEventListener('clink', (e) => {
+            // e.preventDefault();
+            console.log('luister')
+            set_weather_report()
+        })
     </script>
 </body>
 </html>
