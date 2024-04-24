@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script scr="script.js"></script>
-    <title>Weather Fashion</title>
-</head>
-<body>
-    <header class="page-header">
-        <h1 class="page-title">WeatherFashion</h1>
-        <p class="hightlighted-text">The right outfit for every type of weather.</p>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Comatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css">
+        <script scr="/js/script.js" type="text/javascript"></script>
+        <title>Weather Fashion</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <h1 class="page-title">WeatherFashion</h1>
+            <p class="hightlighted-text">The right outfit for every type of weather.</p>
+        </header>
 
-    <main class="page-content">
-        <section class="weather-report">
-            <h2 class="section-title">Today's weather</h2>
+        <main class="page-content">
+            <section class="weather-report">
+                <h2 class="section-title">Today's weather</h2>
 
-            <div class="weather-report-input">
-                <p>Location</p>
-                <input type="text" id="input-location" value="Rotterdam"></input><button class="submit-input" type="button" id="submit-location">Set location</button>
-            </div>
-            
-            <div class="weather-report-output">
-                <table class="aligned-table">
-                    <tr>
-                        <td>Temperature</td>
-                        <td><span id="temp"></span> <p class="data-unit">°C</p></td>
-                    </tr>
-                    <tr>
-                        <td>Wind speed</td>
-                        <td id="wind"> <p class="data-unit"> km/h</p></td>
-                    </tr>
-                    <tr>
-                        <td>Humidity</td>
-                        <td id="humidity"> <p class="data-unit"></p></td>
-                    </tr>
-                    <tr>
-                        <td>Radiotaion</td>
-                        <td id="radiation"> <p class="data-unit"></p></td>
-                    </tr>
-                </table>
-            </div>
+                <div class="weather-report-input">
+                    <p>Location</p>
+                    <input type="text" id="input-location" value="Rotterdam"></input><button class="submit-input" type="submit" id="submit-location">Set location</button>
+                </div>
+                
+                <div class="weather-report-output">
+                    <table class="aligned-table">
+                        <tr>
+                            <td>Temperature</td>
+                            <td><span id="temp"></span> <p class="data-unit">°C</p></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed</td>
+                            <td id="wind"> <p class="data-unit"> km/h</p></td>
+                        </tr>
+                        <tr>
+                            <td>Humidity</td>
+                            <td id="humidity"> <p class="data-unit"></p></td>
+                        </tr>
+                        <tr>
+                            <td>Radiotaion</td>
+                            <td id="radiation"> <p class="data-unit"></p></td>
+                        </tr>
+                    </table>
+                </div>
 
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <script>
+        <script>
+            // display_weather_report();
 
-        document.getElementById('submit-location').addEventListener('clink', (e) => {
-            // e.preventDefault();
-            console.log('luister')
-            set_weather_report()
-        })
-    </script>
-</body>
+            document.getElementById('submit-location').addEventListener('click', (e) => {
+                e.preventDefault();
+
+                set_weather_report()
+            });
+        </script>
+    </body>
 </html>

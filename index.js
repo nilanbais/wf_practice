@@ -1,5 +1,8 @@
-const express = require('express');
+// load env vars
+require('dotenv').config();
 
+const express = require('express');
+const path = require('path');
 
 
 
@@ -9,12 +12,12 @@ const server = express();
 
 
 server.use(express.json({ limit: '1mb'}));
-server.use(express.static('./public'));
+server.use(express.static(path.join(__dirname, '/public')))
 
+
+server.use('/weather_report', require('./routes/api/weather_report_router'));
 
 
 server.listen(PORT, () => {
     console.log(`Listening at port ${PORT}`)
 });
-
-
