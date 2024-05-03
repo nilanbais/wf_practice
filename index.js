@@ -12,7 +12,7 @@ const server = express();
 
 
 server.use(express.json({ limit: '1mb'}));
-server.use(express.static(path.join(__dirname, '/public')))
+server.use(express.static(path.join(__dirname, 'public')))
 
 
 server.use('/weather_report', require('./routes/api/weather_report_router'));
